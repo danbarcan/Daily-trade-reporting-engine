@@ -1,7 +1,5 @@
 package com.jpmc.test.tests;
 
-import static org.junit.Assert.*;
-
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -9,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -59,9 +58,7 @@ public class ReportUtilsTest {
 		expectedDailyTotalIncome.put(LocalDate.of(2018, 5, 14), trade3.computeTotal().add(trade4.computeTotal()));
 		expectedDailyTotalIncome.put(LocalDate.of(2018, 5, 15), trade6.computeTotal());
 		
-		if (!expectedDailyTotalIncome.equals(dailyTotalIncome)) {
-			fail("Expected: " + expectedDailyTotalIncome + " found: " + dailyTotalIncome);
-		}
+		Assert.assertTrue("Expected: " + expectedDailyTotalIncome + " found: " + dailyTotalIncome, expectedDailyTotalIncome.equals(dailyTotalIncome));
 	}
 	
 	@Test
@@ -72,9 +69,7 @@ public class ReportUtilsTest {
 		expectedDailyTotalOutcome.put(LocalDate.of(2018, 5, 14), trade1.computeTotal().add(trade2.computeTotal()));
 		expectedDailyTotalOutcome.put(LocalDate.of(2018, 5, 15), trade5.computeTotal());
 		
-		if (!expectedDailyTotalOutcome.equals(dailyTotalOutcome)) {
-			fail("Expected: " + expectedDailyTotalOutcome + " found: " + dailyTotalOutcome);
-		}
+		Assert.assertTrue("Expected: " + expectedDailyTotalOutcome + " found: " + dailyTotalOutcome, expectedDailyTotalOutcome.equals(dailyTotalOutcome));
 	}
 	
 	@Test
@@ -86,9 +81,7 @@ public class ReportUtilsTest {
 		expectedRanking.add(trade3);
 		expectedRanking.add(trade6);
 		
-		if (!expectedRanking.equals(rankingIncomeTrades)) {
-			fail("Expected: " + expectedRanking + " found: " + rankingIncomeTrades);
-		}
+		Assert.assertTrue("Expected: " + expectedRanking + " found: " + rankingIncomeTrades, expectedRanking.equals(rankingIncomeTrades));
 	}
 	
 	@Test
@@ -100,9 +93,7 @@ public class ReportUtilsTest {
 		expectedRanking.add(trade1);
 		expectedRanking.add(trade5);
 		
-		if (!expectedRanking.equals(rankingOutcomeTrades)) {
-			fail("Expected: " + expectedRanking + " found: " + rankingOutcomeTrades);
-		}
+		Assert.assertTrue("Expected: " + expectedRanking + " found: " + rankingOutcomeTrades, expectedRanking.equals(rankingOutcomeTrades));
 	}
 
 }

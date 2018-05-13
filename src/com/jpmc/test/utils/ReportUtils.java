@@ -29,14 +29,14 @@ public class ReportUtils {
 	
 	public static List<Trade> orderIncomingTrades(List<Trade> trades) {
 		List<Trade> incomingTrades = trades.stream().filter(Trade::isIncoming).collect(Collectors.toList());
-		incomingTrades.sort(new TradeTotalComparator());
+		incomingTrades.sort(Comparator.comparing(Trade::computeTotal).reversed().thenComparing(Trade::getInstructionDate).thenComparing(Trade::getEntity));
 		
 		return incomingTrades;
 	}
 	
 	public static List<Trade> orderOutgoingTrades(List<Trade> trades) {
 		List<Trade> incomingTrades = trades.stream().filter(Trade::isOutgoing).collect(Collectors.toList());
-		incomingTrades.sort(new TradeTotalComparator());
+		incomingTrades.sort(Comparator.comparing(Trade::computeTotal).reversed().thenComparing(Trade::getInstructionDate).thenComparing(Trade::getEntity));
 		
 		return incomingTrades;
 	}

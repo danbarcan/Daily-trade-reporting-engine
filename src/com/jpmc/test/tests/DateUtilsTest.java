@@ -1,9 +1,8 @@
 package com.jpmc.test.tests;
 
-import static org.junit.Assert.fail;
-
 import java.time.LocalDate;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.jpmc.test.utils.DateUtils;
@@ -18,9 +17,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 14);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -30,10 +27,8 @@ public class DateUtilsTest {
 		
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
-		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -44,9 +39,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -57,9 +50,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 14);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -70,9 +61,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -83,9 +72,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -96,9 +83,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 11);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -109,9 +94,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -122,9 +105,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 13);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -135,9 +116,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 10);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -148,9 +127,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 10);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -161,9 +138,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 10);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -174,9 +149,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 14);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -187,9 +160,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 14);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -200,9 +171,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 14);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -213,9 +182,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 15);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -226,9 +193,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 15);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -239,9 +204,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 15);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -252,9 +215,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 16);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -265,9 +226,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 16);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 	
 	@Test
@@ -278,9 +237,7 @@ public class DateUtilsTest {
 		LocalDate actualDate = DateUtils.getWorkingDateForCurrency(date, currency);
 		LocalDate expectedDate = LocalDate.of(2018, 5, 16);
 		
-		if (!actualDate.isEqual(expectedDate)) {
-			fail("Expected: " + expectedDate + " received: " + actualDate);
-		}
+		Assert.assertTrue("Expected: " + expectedDate + " received: " + actualDate, actualDate.isEqual(expectedDate));
 	}
 
 }

@@ -1,8 +1,9 @@
 package com.jpmc.test.main;
 
-import com.jpmc.test.beans.Trade;
-import com.jpmc.test.enums.TransactionType;
-import com.jpmc.test.utils.ReportUtils;
+import static com.jpmc.test.utils.ReportUtils.getDailyTotalIncoming;
+import static com.jpmc.test.utils.ReportUtils.getDailyTotalOutgoing;
+import static com.jpmc.test.utils.ReportUtils.orderIncomingTrades;
+import static com.jpmc.test.utils.ReportUtils.orderOutgoingTrades;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -11,21 +12,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.jpmc.test.beans.Trade;
+import com.jpmc.test.enums.TransactionType;
+
 public class Main {
 
     public static void main(String[] args) {
         List<Trade> trades = createTrades();
 
-        Map<LocalDate, BigDecimal> dailyTotalIncomingMap = ReportUtils.getDailyTotalIncoming(trades);
+        Map<LocalDate, BigDecimal> dailyTotalIncomingMap = getDailyTotalIncoming(trades);
         displayReportDailyTotal(dailyTotalIncomingMap, "Report daily incoming trades");
 
-        Map<LocalDate, BigDecimal> dailyTotalOutgoingMap = ReportUtils.getDailyTotalOutgoing(trades);
+        Map<LocalDate, BigDecimal> dailyTotalOutgoingMap = getDailyTotalOutgoing(trades);
         displayReportDailyTotal(dailyTotalOutgoingMap, "Report daily outgoing trades");
 
-        List<Trade> rankingIncomingTrades = ReportUtils.orderIncomingTrades(trades);
+        List<Trade> rankingIncomingTrades = orderIncomingTrades(trades);
         displayRankingIncomingTrades(rankingIncomingTrades, "Ranking incoming trades");
 
-        List<Trade> rankingOutgoingTrades = ReportUtils.orderOutgoingTrades(trades);
+        List<Trade> rankingOutgoingTrades = orderOutgoingTrades(trades);
         displayRankingIncomingTrades(rankingOutgoingTrades, "Ranking outgoing trades");
     }
 

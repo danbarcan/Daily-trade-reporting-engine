@@ -10,6 +10,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ReportUtils {
+    private Comparator tradeComparator = Comparator.comparing(Trade::computeTotal).reversed()
+                .thenComparing(Trade::getInstructionDate)
+                .thenComparing(Trade::getEntity);
 
     public static Map<LocalDate, BigDecimal> getDailyTotalIncoming(List<Trade> trades) {
         Map<LocalDate, List<Trade>> dailyIncomingTradesMap = getDailyIncomingTradeList(trades);
@@ -25,18 +28,14 @@ public class ReportUtils {
 
     public static List<Trade> orderIncomingTrades(List<Trade> trades) {
         List<Trade> incomingTrades = trades.stream().filter(Trade::isIncoming).collect(Collectors.toList());
-        incomingTrades.sort(Comparator.comparing(Trade::computeTotal).reversed()
-                .thenComparing(Trade::getInstructionDate)
-                .thenComparing(Trade::getEntity));
+        incomingTrades.sort(tradeComparator);
 
         return incomingTrades;
     }
 
     public static List<Trade> orderOutgoingTrades(List<Trade> trades) {
         List<Trade> incomingTrades = trades.stream().filter(Trade::isOutgoing).collect(Collectors.toList());
-        incomingTrades.sort(Comparator.comparing(Trade::computeTotal).reversed()
-                .thenComparing(Trade::getInstructionDate)
-                .thenComparing(Trade::getEntity));
+        incomingTrades.sort(tradeComparator);
 
         return incomingTrades;
     }

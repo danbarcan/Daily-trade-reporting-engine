@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class ReportUtils {
-    private Comparator tradeComparator = Comparator.comparing(Trade::computeTotal).reversed()
+    private static Comparator<Trade> tradeComparator = Comparator.comparing(Trade::computeTotal).reversed()
                 .thenComparing(Trade::getInstructionDate)
                 .thenComparing(Trade::getEntity);
 
